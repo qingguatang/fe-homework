@@ -1,0 +1,28 @@
+{
+  "name": "fe-homework",
+  "version": "1.0.0",
+  "description": "homework bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^4.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-webserver": "^0.9.1",
+    "less": "^3.0.1",
+    "less-plugin-autoprefix": "^1.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qingguatang/fe-homework.git"
+  },
+  "author": "bencode@163.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qingguatang/fe-homework/issues"
+  },
+  "homepage": "https://github.com/qingguatang/fe-homework#readme"
+}

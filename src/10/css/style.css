@@ -1,0 +1,17 @@
+body{
+    padding: 0;
+    margin: 0;
+    min-width: 700px;
+}
+h1,h4{
+    margin-top: 0;
+    margin-bottom:0;
+}
+p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+input{
+    outline: none;
+    -webkit-appearance: none;
+}

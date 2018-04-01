@@ -1,0 +1,40 @@
+.clearfix{
+    &:after{
+        content: "";
+        display:block;
+        clear: both;
+    }
+}
+h1{
+    font-size: 25px;
+    color: #000;
+}
+#head,#foot{
+    line-height:80px;
+    text-align: center
+}
+#body{
+    .clearfix();
+}
+.textContent{
+    float: left;
+    min-height: 350px;
+}
+.main-inner{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+#mainContent{
+    width: 100%;
+    background-color: #f7daec;
+}
+#leftContent{
+    width: 200px;
+    background-color: #95caff;
+    margin-left: -100%;//其实这里我木有明白
+}
+#rightContent{
+    width: 200px;
+    background-color: #fd3154;
+    margin-left:-200px;
+}

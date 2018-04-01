@@ -9,6 +9,10 @@ h1{
     font-size: 25px;
     color: #000;
 }
+
+// 一般都是确定维一的元素，才使用id。
+// 一般来说用class比较多。
+// 有些情况下必须得用id，才用id, 比如表单元素为了配置label for属性使用时会使用id属性
 #head,#foot{
     line-height:80px;
     text-align: center
@@ -16,6 +20,7 @@ h1{
 #body{
     .clearfix();
 }
+// class命令方式最好一致，一般都是中划线连接的小写英文单词
 .textContent{
     float: left;
     min-height: 350px;
@@ -24,6 +29,7 @@ h1{
     margin-left: 200px;
     margin-right: 200px;
 }
+
 #mainContent{
     width: 100%;
     background-color: #f7daec;
@@ -31,10 +37,11 @@ h1{
 #leftContent{
     width: 200px;
     background-color: #95caff;
-    margin-left: -100%;//其实这里我木有明白
+    // margin值可以为负数的，你可以在chrome开发者工具中慢慢调，比如10px开始慢慢增加看效果就会明白的。
+    margin-left: -100%; //其实这里我木有明白
 }
 #rightContent{
     width: 200px;
     background-color: #fd3154;
-    margin-left:-200px;
+    margin-left: -200px;
 }

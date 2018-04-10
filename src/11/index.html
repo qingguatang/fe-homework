@@ -12,24 +12,41 @@
 </head>
 <body>
     <div class="ui container">
-        <div class="column">
-            <div class="ui form">
-                <div class="inline fields">
-                    <div class="two wide field">
-                    <label>颜色</label>
-                    <input type="color" value="#000">
-                    </div>
-                    <div class="two wide field">
-                    <label>背景颜色</label>
-                    <input type="color" value="#000">
-                    </div>
-                    <div class="three wide field">
-                    <label>大小</label>
-                    <input type="text" placeholder="Last Name">
-                    </div>
-                </div>
+        <h1 class="ui header">富文本编辑器</h1>
+        <div class="nav-content">
+            <div class="nav-list">
+                <label>颜色：</label>
+                <input type="color" value="#000">
             </div>
-            <div><button class="ui primary button">确定</button></div>
+            <div class="nav-list">
+                <label>背景颜色：</label>
+                <input type="color" value="#000">
+            </div>
+            <div class="nav-list">
+                <label>大小：</label>
+                <select class="ui">
+                    <option value="">请选择字体大小</option>
+                    <option value="14">14px</option>
+                    <option value="16">16px</option>
+                    <option value="18">18px</option>
+                    <option value="20">20px</option>
+                    <option value="22">22px</option>
+                    <option value="24">24px</option>
+                </select>
+            </div> 
+        </div>
+        <button class="ui primary button">确定</button>
+        <div class="ui form">
+            <div class="text-info field">
+                <label>内容：</label>
+                <input type="text" placeholder="请输入您想输入的内容">
+            </div>
+        </div>
+        <div class="ui horizontal divider">以下是输出内容</div>
+        <div class="ui form">
+            <div class="field">
+                <textarea></textarea>
+            </div>
         </div>
     </div> 
 </body>

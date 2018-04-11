@@ -6,48 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="js/semantic.min.js"></script>
     <title>简易文本编辑器</title>
 </head>
 <body>
     <div class="ui container">
-        <h1 class="ui header">富文本编辑器</h1>
+        <h1 class="ui header">简易文本编辑器</h1>
         <div class="nav-content">
             <div class="nav-list">
                 <label>颜色：</label>
-                <input type="color" value="#000">
+                <input type="color" value="#000" class="font-color">
             </div>
             <div class="nav-list">
                 <label>背景颜色：</label>
-                <input type="color" value="#000">
+                <input type="color" value="#ffffff" class="bg-color">
             </div>
             <div class="nav-list">
                 <label>大小：</label>
-                <select class="ui">
+                <select class="font-size">
                     <option value="">请选择字体大小</option>
-                    <option value="14">14px</option>
-                    <option value="16">16px</option>
-                    <option value="18">18px</option>
-                    <option value="20">20px</option>
-                    <option value="22">22px</option>
-                    <option value="24">24px</option>
+                    <option value="14px" selected>14px</option>
+                    <option value="16px">16px</option>
+                    <option value="18px">18px</option>
+                    <option value="20px">20px</option>
+                    <option value="22px">22px</option>
+                    <option value="24px">24px</option>
                 </select>
             </div> 
         </div>
-        <button class="ui primary button">确定</button>
-        <div class="ui form">
+        <div class="ui form input-box">
             <div class="text-info field">
                 <label>内容：</label>
-                <input type="text" placeholder="请输入您想输入的内容">
+                <input type="text" placeholder="请输入您想输入的内容" value="lola是大美女！">
             </div>
         </div>
+        <button class="ui primary button sure-btn">确定</button>
         <div class="ui horizontal divider">以下是输出内容</div>
-        <div class="ui form">
-            <div class="field">
-                <textarea></textarea>
-            </div>
-        </div>
-    </div> 
+        <div class="ui raised segment">
+            <p class="get-text"></p>
+          </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="js/semantic.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

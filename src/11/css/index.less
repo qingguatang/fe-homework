@@ -2,6 +2,13 @@
     position: relative;
     top:50px;
 }
+.clearfix{
+    &:after{
+        content:"";
+        clear: both;
+        display: block;
+    }
+}
 .nav-list{
     float: left;
     margin-right: 15px;
@@ -16,4 +23,16 @@
 }
 .get-text{
     min-height: 150px;
+}
+.check-box{
+    .clearfix();
+    padding-top:20px;
+    label{
+        float: left;
+        margin-right:3rem !important;
+    }
+    input{
+        vertical-align: middle !important;
+        margin-right:10px;
+    }
 }

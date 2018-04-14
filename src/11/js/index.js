@@ -5,14 +5,23 @@ const fSize=richEditor.querySelector('.font-size');
 const textInfo=richEditor.querySelector('.text-info input');
 const getText=richEditor.querySelector('.get-text');
 const sureBtn=richEditor.querySelector('.sure-btn');
+const boldF=richEditor.querySelector('.bold-f');
+const underlineF=richEditor.querySelector('.underline-f');
 
 let lastValue=localStorage.getItem('preview');
 getText.innerHTML=lastValue;
 
 function addText(){
     const oldValue=textInfo.value.trim();
+    let fontWeight,textDecoration;
+    boldF.checked?fontWeight='bold':fontWeight='normal';
+    underlineF.checked?textDecoration='underline':textDecoration='none';
     if(oldValue){
-        getText.innerHTML+='<span style="background-color:'+bgColor.value+';color:'+fColor.value+';font-size:'+fSize.value+'">'+oldValue+'</span>';
+        getText.innerHTML+='<span style="background-color:'+bgColor.value+' \
+        ;color:'+fColor.value+' \
+        ;font-size:'+fSize.value+' \
+        ;text-decoration:'+textDecoration+' \
+        ;font-weight:'+fontWeight+'">'+oldValue+'</span>';
         localStorage.setItem('preview',getText.innerHTML);
     }
     textInfo.value='';

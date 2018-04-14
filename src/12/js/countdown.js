@@ -15,14 +15,15 @@ function add(){
 function reduce(){
     update(-10);
 }
-function update(type){
-    count+=type;
-    if(count>100){
-        count=100;
+
+// 我帮你格式化了一个函数，你下次可以按这样子来格式化。
+function update(type) {
+    count += type;
+    if (count > 100) {
+        count = 100;
+    } else if (count < 0) {
+        count = 0;
     }
-    else if(count<0){
-        count=0;
-    }
-    obar.style.width=count+'%';
-    loadingNum.innerHTML=count+'%';
+    obar.style.width = count + '%';
+    loadingNum.innerHTML = count + '%';
 }

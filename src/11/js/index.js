@@ -14,9 +14,31 @@ getText.innerHTML=lastValue;
 function addText(){
     const oldValue=textInfo.value.trim();
     let fontWeight,textDecoration;
+    // 一般我们写成
+    // var fontWeight = boldF.checked ? 'bold' : 'normal';
+    // 尽量变量定义的同时就初始化好。
+    // 你应该学过ES6，所以以后你直接使用const来定义就可以了。
+    // 格式化时，一般我们操作符左右会加空格，你下次可以注意下我代码中空格的格式化。
+    // 这样方便后面其他同学维护，否则代码挤在一起，看起来会有点累。
+
     boldF.checked?fontWeight='bold':fontWeight='normal';
     underlineF.checked?textDecoration='underline':textDecoration='none';
     if(oldValue){
+        // 用ES5的时候，不用\来合并字符串
+        // 可以使用数组的join，这是以前的一种技巧，有了ES6后就很少用了。
+        /*
+        getText.innerHTML = [
+          '<span style="background-color:' + bgColor...,
+          ...
+          ...
+        ].join('');
+         */
+        // 现在直接使用ES6的模板字符串，你可以尝试使用：
+        /*
+        getTexgt.innerHTML = `
+          <span style="background-color: ${bgColor.value}"
+        `
+        */
         getText.innerHTML+='<span style="background-color:'+bgColor.value+' \
         ;color:'+fColor.value+' \
         ;font-size:'+fSize.value+' \
@@ -30,6 +52,7 @@ function addText(){
 sureBtn.addEventListener('click',function(){ 
     addText();
 });
+// 这个keyup是否事件应该挂接在输入框上？而不是document上。
 document.addEventListener('keyup',function(ev){
     // 后面我们总是使用===来比较，因为==会发生类型转换
     // https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness

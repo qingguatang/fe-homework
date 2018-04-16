@@ -1,125 +1,142 @@
-ul, li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+li,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .clearfix:after {
-    content: '';
-    display: block;
-    clear: both;
+  content: '';
+  display: block;
+  clear: both;
 }
 
 .clearfix() {
-    &:after {
-        content: '';
-        display: block;
-        clear: both;
-    }
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
 }
+
 .page-header {
+  .clearfix();
+  width: 675px;
+  background-color: white;
+  line-height: 30px;
+  margin-top: 40px;
+
+  .main1-nav {
     .clearfix();
-    width: 675px;
-    background-color: white;
-    line-height: 30px;
-    margin-top: 40px;
+    float: left;
 
-    .main1-nav {
-        .clearfix();
-        float: left;
+    li {
+      /*   border: 1px solid red; */
+      float: left;
+      font-size: 14px;
+      font-size: 14px;
+      padding-left: 22px;
+      margin-right: 18px;
 
-        li {
-            /*   border: 1px solid red; */
-            float: left;
-            font-size: 14px;
-            font-size: 14px;
-            padding-left: 22px;
-            margin-right: 18px;
+      a {
+        text-decoration: none;
+        color: #669;
+      }
 
-            a {
-                text-decoration: none;
-                color: #669;
-            }
-
-            a:hover {
-                color: #fff;
-                text-decoration: none;
-                background: #37a;
-            }
-        }
-
-        // 单独的元素做icon的话，需要给它加上一些样式。
-        // 设置宽和高，否则因为没内容，就不会占有空间
-        // 因为要和文字在一行，又要设置宽和高，所以使用 inline-block
-        // inline是行内的，它设置不了宽和高，而block又是块状的，会独自占容器空间
-        // 所以就出现了一个inline-block，它本质是inline，只是可以设置宽和高以及padding,margin，所以比较适合做图标按扭等功能。
-        // vertical-align, 这个用于对齐，要参考：https://www.qingguatang.com/preview/task?id=52827899920646144&index=4
-        // 你可以尝试去掉vertical-align，对比一下试试。
-        .icon {
-          display: inline-block;
-          width: 24px;
-          height: 24px;
-          vertical-align: middle;
-        }
-
-        .talk {
-            background-position: 0 0;
-
-            .icon {
-                background: url(images/00.png) no-repeat 0 0;
-                background-size: 24px auto;
-            }
-        }
-
-        .picture {
-            background-position: 0 -30px;
-
-            .icon {
-                background: url(images/00.png) no-repeat 0 0;
-                background-size: 24px auto;
-            }
-        }
-
-        .web {
-            background-position: 0 -62px;
-
-            .icon {
-                background: url(images/00.png) no-repeat 0 0;
-                background-size: 24px auto;
-            }
-        }
-
-        .note {
-            background-position: 0 -96px;
-
-            .icon {
-                background: url(images/00.png) no-repeat 0 0;
-                background-size: 24px auto;
-            }
-        }
+      a:hover {
+        color: #fff;
+        text-decoration: none;
+        background: #37a;
+      }
     }
 
-    .main2-nav {
-        float: right;
+    // 单独的元素做icon的话，需要给它加上一些样式。
+    // 设置宽和高，否则因为没内容，就不会占有空间
+    // 因为要和文字在一行，又要设置宽和高，所以使用 inline-block
+    // inline是行内的，它设置不了宽和高，而block又是块状的，会独自占容器空间
+    // 所以就出现了一个inline-block，它本质是inline，只是可以设置宽和高以及padding,margin，所以比较适合做图标按扭等功能。
+    // vertical-align, 这个用于对齐，要参考：https://www.qingguatang.com/preview/task?id=52827899920646144&index=4
+    // 你可以尝试去掉vertical-align，对比一下试试。
+    // .icon {
+    //   display: inline-block;
+    //   width: 24px;
+    //   height: 24px;
+    //   vertical-align: middle;
+    // }
 
-        li {
-            /*   border: 1px solid red; */
-            font-size: 14px;
-            font-size: 14px;
-            padding-left: 22px;
-            margin-right: 18px;
+    .talk {
 
-            a {
-                text-decoration: none;
-                color: #999;
-            }
-
-            .icon {
-                background: url(images/00.png) no-repeat 0 -128px;
-                background-size: 24px auto;
-            }
-        }
+      .icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
+        background: url("images/00.png") no-repeat 0 0;
+        background-size: 24px auto;
+      }
     }
+
+    .picture {
+        
+      .icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
+        background: url("images/00.png") no-repeat 0 -30px;
+        background-size: 24px auto;
+      }
+    }
+
+    .web {
+
+      .icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
+        background: url("images/00.png") no-repeat 0 -62px;
+        background-size: 24px auto;
+      }
+    }
+
+    .note {
+
+      .icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
+        background: url("images/00.png") no-repeat 0 -96px;
+        background-size: 24px auto;
+      }
+    }
+  }
+
+  .main2-nav {
+    float: right;
+
+    li {
+      /*   border: 1px solid red; */
+      font-size: 14px;
+      font-size: 14px;
+      padding-left: 22px;
+      margin-right: 18px;
+
+      a {
+        text-decoration: none;
+        color: #999;
+      }
+
+      .icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
+        background: url("images/00.png") no-repeat 0 -128px;
+        background-size: 24px auto;
+      }
+    }
+  }
 
 }
-

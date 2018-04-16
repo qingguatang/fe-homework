@@ -48,6 +48,20 @@ ul, li {
             }
         }
 
+        // 单独的元素做icon的话，需要给它加上一些样式。
+        // 设置宽和高，否则因为没内容，就不会占有空间
+        // 因为要和文字在一行，又要设置宽和高，所以使用 inline-block
+        // inline是行内的，它设置不了宽和高，而block又是块状的，会独自占容器空间
+        // 所以就出现了一个inline-block，它本质是inline，只是可以设置宽和高以及padding,margin，所以比较适合做图标按扭等功能。
+        // vertical-align, 这个用于对齐，要参考：https://www.qingguatang.com/preview/task?id=52827899920646144&index=4
+        // 你可以尝试去掉vertical-align，对比一下试试。
+        .icon {
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          vertical-align: middle;
+        }
+
         .talk {
             background-position: 0 0;
 

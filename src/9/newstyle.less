@@ -48,6 +48,15 @@ ul {
         text-decoration: none;
         background: #37a;
       }
+
+      .icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
+        background: url("images/00.png") no-repeat 0 0;
+        background-size: 24px auto;
+      }
     }
 
     // 单独的元素做icon的话，需要给它加上一些样式。
@@ -64,57 +73,32 @@ ul {
     //   vertical-align: middle;
     // }
 
-
     // 嗯，按扭做得不错， 不过有一个可以优化的点，
     // 就是你看有很多按扭，它们都一样，所以你可以直写一遍.icon这个样式，包含通用的样式。
     // 然后在.talk, .picture的icon中只写不同的样式。
     // 这样你的代码是不是精简很多？又可以简少重复。
 
     .talk {
-
       .icon {
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        vertical-align: middle;
-        background: url("images/00.png") no-repeat 0 0;
-        background-size: 24px auto;
+        background-position: 0 0;
       }
     }
 
     .picture {
-        
       .icon {
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        vertical-align: middle;
-        background: url("images/00.png") no-repeat 0 -30px;
-        background-size: 24px auto;
+        background-position: 0 -32px;
       }
     }
 
     .web {
-
       .icon {
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        vertical-align: middle;
-        background: url("images/00.png") no-repeat 0 -62px;
-        background-size: 24px auto;
+        background-position: 0 -62px;
       }
     }
 
     .note {
-
       .icon {
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        vertical-align: middle;
-        background: url("images/00.png") no-repeat 0 -96px;
-        background-size: 24px auto;
+        background-position: 0 -94px;
       }
     }
   }

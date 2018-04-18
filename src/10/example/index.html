@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>例子</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="layout">
+        <div class="left">left</div>
+        <div class="right">right</div>
+        <div class="mian">mian</div>
+    </div>
+
+    <h2>RGB颜色混合器</h2>
+    <div class="color-mixer">
+        <div class="adjuster">
+            <div class="red">
+                <div class="title">红(R)</div>
+                <div class="body">
+                    <input type="range" min="0" max="255" value="0">
+                </div>
+            </div>
+            <div class="green">
+                <div class="title">绿(G)</div>
+                <div class="body">
+                    <input type="range" min="0" max="255" value="0">
+                </div>
+            </div>
+            <div class="blue">
+                <div class="title">蓝(B)</div>
+                <div class="body">
+                    <input type="range" min="0" max="255" value="0">
+                </div>
+            </div>
+        </div>
+        <!--adjuster-->
+        <div class="box">
+            <div class="indicator"></div>
+            <div class="label">颜色值</div>
+        </div>
+    </div>
+    <!--color-mixer-->
+    <script src="script.js"></script>
+</body>
+
+</html>

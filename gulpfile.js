@@ -24,7 +24,7 @@ gulp.task('less', function () {
       }
     }))
     .pipe($.sourcemaps.init())
-    .pipe($.less())
+    .pipe($.lessDev())
     .pipe($.autoprefixer('last 10 versions', 'ie 9'))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('./src'));

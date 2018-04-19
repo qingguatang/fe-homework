@@ -1,11 +1,12 @@
 // alert('hello world');
-var label = document.querySelector('.color-mixer .label');
+var label = document.querySelector('.color-mixer .labol');
+label.innerHTML = 'hello world';
 
 var red = 76;
 var gree = 36;
 var blue = 15;
 
-// label.innerHTML = 'rgb(76,36,152)';
+
 var color = 'rgb(' + red + ',' + green + ',' + blue + ')';
 label.innerHTML = color; //动态生成颜色
 

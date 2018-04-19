@@ -1,30 +1,34 @@
-// alert('hello world');
-var label = document.querySelector('.color-mixer .labol');
-label.innerHTML = 'hello world';
+function doYourWork() {
+    // alert('hello world');
 
-var red = 76;
-var gree = 36;
-var blue = 15;
+    var label = document.querySelector('.color-mixer .label');
 
+    //var red = 76;
+    //var gree = 36;
+    //var blue = 15;
 
-var color = 'rgb(' + red + ',' + green + ',' + blue + ')';
-label.innerHTML = color; //动态生成颜色
+    //label.innerHTML = 'hello world';
+    var color = 'rgb(' + red + ',' + green + ',' + blue + ')';
+    label.innerHTML = color; //动态生成颜色
 
-var a = document.querySelector('h2');
-a.innerHTML = '我要修改下标题';
+    //var a = document.querySelector('h2');
+    //a.innerHTML = '我要修改下标题';
 
-// var message = 'hello world';
-var message = 'aaabbb';
+    // var message = 'hello world';
 
-// 
+    //var message = 'aaabbb';
 
-var indicator = document.querySelector('.color-mixer .indicator')
+    // alert(message);
 
-console.log(indicator);
+    var indicator = document.querySelector('.color-mixer .indicator');
 
-indicator.style.backgroundColor = color;// 'rgb(' + red + ',' + green + ',' + blue + ')';
+    //console.log(indicator);
 
-label.style.fontSize = '20px';
-label.style.fontWeight = 'bold';
+    indicator.style.backgroundColor = color; // 'rgb(' + red + ',' + green + ',' + blue + ')';
 
-a.style.color = 'red';
+    //label.style.fontSize = '20px';
+    //label.style.fontWeight = 'bold';
+
+    //a.style.color = 'red';
+
+}

@@ -1,12 +1,64 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>简易文本编辑器</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <h1>富文本编辑器</h1>
+    <div class="text-editor">
+        <div class="header">
+            <div class="form-group">
+                <div class="field">
+                    <label for="colorInput">颜色</label>
+                    <input type="color" id="colorInput" value="#000000" class="color-input">
+                </div>
+                <div class="field">
+                    <label for="bgColorInput">背景色</label>
+                    <input type="color" id="bgColorInput" value="#ffffff" class="bg-color-input">
+                </div>
+                <div class="field">
+                    <label for="fontSizeSelect">大小</label>
+                    <select id="fontSizeSelect" class="font-size-select">
+                        <option value="14px">14px</option>
+                        <option value="16px">16px</option>
+                        <option value="18px">18px</option>
+                        <option value="20px">20px</option>
+                        <option value="28px">28px</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="field">
+                    <label for="fontWeightBold">
+                        <input type="checkbox" id="fontWeightBold" class="bold-checkbox"> 粗体
+                    </label>
+                </div>
+                <div class="feild">
+                    <label for="underlineCkeckbox">
+                        <input type="checkbox" id="underlineCkeckbox" class="underline-checkbox"> 下划线
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="field">
+                    <label for="textInput">内容</label>
+                    <input type="text" id="textInput" class="text-input">
+                </div>
+            </div>
+
+            <button class="add-btn">确定</button>
+        </div>
+        <div class="preview"></div>
+    </div>
+<script src="script.js"></script>
 </body>
+
 </html>

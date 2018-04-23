@@ -1,17 +1,17 @@
 function addText() {
-    var deitor = document.querySelector('.text-editor');
+    var editor = document.querySelector('.text-editor');
     var preview = editor.querySelector('.preview');
 
     var colorInput = document.querySelector('.text-editor .color-input');
     var color = colorInput.value;
 
     var bgColorInput = document.querySelector('.text-editor .bg-color-input');
-    var bgcolor = bgColorInput.value;
+    var bgColor = bgColorInput.value;
 
     var fontSizeSelect = document.querySelector('.text-editor .font-size-select');
-    var fontsize = fontSizeSelect.value;
+    var fontSize = fontSizeSelect.value;
 
-    var textInput = document('text-editor .text-inpu');
+    var textInput = document.querySelector('.text-editor .text-input');
     var text = textInput.value;
 
     var boldCheckbox = document.querySelector('.text-editor .bold-checkbox');

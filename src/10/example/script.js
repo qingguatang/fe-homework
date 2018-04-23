@@ -33,15 +33,15 @@
 
 // }
 
-fuction addText() {
+function addText() {
     var color = document.querySelector('.color-mixer');
     var indicator = color.querySelector('.indicator');
 
     var red = document.querySelector('.adjuster .red');
     var red = red.value;
 
-    var gree = document('.adjuster .green');
-    var gree = gree.value;
+    var green = document.querySelector('.adjuster .green');
+    var green = gree.value;
 
     var blue = document.querySelector('.adjuster .blue');
     var blue = blue.value;

@@ -2,27 +2,23 @@ const gulp = require('gulp');
 const $ = require('gulp-load-plugins')();
 
 
-gulp.task('webserver', function() {
-  return gulp.src('./src')
+gulp.task('webserver', () => {
+  return gulp.src('.')
     .pipe($.webserver({
       livereload: true,
       open: true,
       directoryListing: {
         enable:true,
-        path: 'src'
+        path: '.'
       }
     }));
 });
 
 
-gulp.task('less', function () {
+gulp.task('less', () => {
   return gulp.src('./src/**/*.less')
-    .pipe($.plumber({
-      errorHandler (err) {
-        $.notify.onError('Error: <%= error.message %>')(err);
-        this.emit('end');
-      }
-    }))
+    .pipe(errorHandler())
+    .pipe($.cached('less'))
     .pipe($.sourcemaps.init())
     .pipe($.lessDev())
     .pipe($.autoprefixer('last 10 versions', 'ie 9'))
@@ -31,8 +27,33 @@ gulp.task('less', function () {
 });
 
 
-gulp.task('watch', function() {
-  gulp.watch('src/**/*.less', ['less']);
+gulp.task('js', () => {
+  gulp.src('src/**/*.js')
+    .pipe(errorHandler())
+    .pipe($.cached('js'))
+    .pipe($.sourcemaps.init())
+    .pipe($.babel({
+      presets: ['babel-preset-env']
+    }))
+    .pipe($.sourcemaps.write())
+    .pipe(gulp.dest('./dist'))
 });
+
+
+gulp.task('watch', () => {
+  gulp.watch('src/**/*.less', ['less']);
+  gulp.watch('src/**/*.js', ['js']);
+});
+
+
+function errorHandler() {
+  return $.plumber({
+    errorHandler(err) {
+      $.notify.onError('Error: <%= error.message %>')(err);
+      this.emit('end');
+    }
+  });
+}
+
 
 gulp.task('default', ['webserver', 'watch', 'less']);

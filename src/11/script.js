@@ -23,10 +23,19 @@ function addText() {
         fontWeight = 'bold';
     }
 
+    var underlineCheckbox = document.querySelector('.text-editor .underline-checkbox');
+    console.log(underlineCheckbox.checked);
+
+    var textDecoration = 'normal';
+    if (underlineCheckbox.checked) {
+        console.log('underline');
+        textDecoration = 'underline';
+    }
+
     var lastHtml = preview.innerHTML;
     preview.innerHTML = lastHtml + '<span style="color:' + color +
         '; font-weight: ' + fontWeight +
-        '; background: ' + bgColor + '; font-size: ' +
+        ';text-decoration: ' + textDecoration + '  background: ' + bgColor + '; font-size: ' +
         fontSize + '">' + text + '</span>';
 
     textInput.value = ''; //提交之后值为空

@@ -1,0 +1,33 @@
+@import 'src/lib/common.less';
+
+.container {
+    padding: 10px;
+
+    .text-clock {
+        width: 180px;
+        background: #ccc;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+
+        .clock {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            position: relative;
+
+            .hour {
+                width: 50px;
+                height: 5px;
+                background: orange;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-top: -2.5px;
+                transform: rotate(-60deg);
+                transform-origin: left -2.5px; 
+            }
+        }
+    }
+}

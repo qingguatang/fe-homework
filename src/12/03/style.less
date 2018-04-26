@@ -9,25 +9,50 @@
         font-size: 40px;
         font-weight: bold;
         text-align: center;
+    }
 
-        .clock {
-            width: 200px;
-            height: 200px;
-            border: 1px solid #000;
-            border-radius: 50%;
-            position: relative;
+    .clock {
+        width: 200px;
+        height: 200px;
+        margin-top: 20px;
+        border: 1px solid #000;
+        border-radius: 50%;
+        position: relative;
 
-            .hour {
-                width: 50px;
-                height: 5px;
-                background: orange;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                margin-top: -2.5px;
-                transform: rotate(-60deg);
-                transform-origin: left -2.5px; 
-            }
+        .hour {
+            width: 50px;
+            height: 5px;
+            background: orange;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -2.5px;
+            transform: rotate(-60deg);
+            transform-origin: left 2.5px; 
+        }
+
+        .minute {
+            width: 60px;
+            height: 4px;
+            background: green;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -2px;
+            transform: rotate(-90deg);
+            transform-origin: left 2px;
+        }
+
+        .second {
+            width: 80px;
+            height: 2px;
+            background: red;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -1px;
+            transform: rotate(-90deg);
+            transform-origin: left 1px;
         }
     }
 }

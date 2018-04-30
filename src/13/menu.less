@@ -1,0 +1,53 @@
+@import 'src/lib/common.less';
+
+.menu {
+  .clearfix();
+  width: 600px;
+  background: #000;
+  margin-left: 30px;
+  margin-top: 20px;
+  border-radius: 5px;
+
+  li {
+    // border: 1px solid red;
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    padding: 0 20px;
+    border-right: 1px solid #404040;
+    cursor: pointer;
+  }
+
+  li:first-child {
+
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  li.activ {
+    &.red {
+      background-color: #db2828;
+    }
+
+    &.orange {
+      background-color: #f2711c;
+    }
+
+    &.yellow {
+      background-color: #fbbd08;
+    }
+
+    &.olive {
+      background-color: #b5cc18;
+    }
+
+    &.green {
+      background-color: #21ba45;
+    }
+
+    &.teal {
+      background-color: #00b5ad;
+
+    }
+  }
+}

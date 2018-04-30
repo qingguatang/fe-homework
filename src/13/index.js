@@ -22,3 +22,6 @@ function initUserCenter() {
         }
     });
 }
+
+//调用函数
+initUserCenter();

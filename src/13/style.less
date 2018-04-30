@@ -1,0 +1,49 @@
+@import 'src/lib/common.less';
+
+.top-bar {
+  border: 1px solid red;
+  padding: 10px 100px;
+
+  .user-center {
+    border: 1px solid blue;
+    width: 200px;
+    position: relative;
+
+    .title {
+      font-size: 12px;
+      cursor: pointer;
+      /*cursor 属性规定要显示的光标的形状*/
+    }
+
+    .panel {
+      border: 1px solid gray;
+      width: 100%;
+      /*宽度设置成百分比可随use-center的宽度变化*/
+      background: #fff;
+      margin-top: 1px;
+      font-size: 12px;
+      position: absolute;
+
+      display: none;
+    }
+
+    &.active {
+      .panel {
+        display: block;
+      }
+
+      .title {
+        background: #eee;
+      }
+    }
+  }
+
+  // .user-center.active .panel {
+  //   display: block;
+  // }
+
+  // .user-center.active .title {
+  //   background: #eee;
+  // }
+
+}

@@ -25,7 +25,7 @@ function initMenu() {
         lis[index].addEventListener('click', function () {
             console.log(index, lis[index]);
             // 下面的循环次数，写错了，不能是lis[i]，而是lis.length
-            for (var i = 0; i < lis[i].length; i++) {
+            for (var i = 0; i < lis.length; i++) {
                 lis[i].classList.remove('active');
             }
             lis[index].classList.add('active');

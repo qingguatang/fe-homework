@@ -1,0 +1,47 @@
+@import 'src/lib/common.less';
+
+.tab-menu {
+  .clearfix();
+  //   border: 1px solid red;
+  padding: 10px 100px;
+  width: 300px;
+  //   position: relative;
+
+  li {
+    // border: 1px solid blue;
+    float: left;
+    color: #000;
+    font-size: 14px;
+    padding: 0 20px;
+    cursor: pointer;
+  }
+
+  li.active {
+    &.first {
+      border: 1px solid #000;
+      border-radius: 5px;
+      border-bottom: none;
+    }
+
+    &.second {
+      border: 1px solid #000;
+      border-radius: 5px;
+      border-bottom: none;
+    }
+
+    &.thrid {
+      border: 1px solid #000;
+      border-radius: 5px;
+      border-bottom: none;
+    }
+  }
+
+  .contains {
+    border: 1px solid #000;
+    // width: 100%;
+    min-height: 20px;
+    // position: absolute;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+}

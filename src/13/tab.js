@@ -8,8 +8,7 @@ function initTabMenu() {
     // console.log(lis);
 
     for (var i = 0; i < lis.length; i++) {
-        console.log(contains.innerHTML);
-        contains.innerHTML = lis[i].innerHTML;
+        console.log(lis[i].innerHTML);
         addEvent(i);
 
     }
@@ -20,6 +19,7 @@ function initTabMenu() {
                 lis[i].classList.remove('active');
             }
             lis[index].classList.add('active');
+            contains.innerHTML = lis[index].innerHTML;
         });
     }
 

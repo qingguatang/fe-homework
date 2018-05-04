@@ -1,0 +1,32 @@
+@import 'src/lib/common.less';
+
+.tab {
+  //   border: 1px solid red;
+  padding: 10px 20px;
+
+  .tab-menu {
+    .clearfix();
+    // border: 1px solid blue;
+    width: 300px;
+
+    li {
+      border: 1px solid transparent;
+      margin-bottom: -1px;
+      cursor: pointer;
+      float: left;
+      padding: 0 20px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    li.active {
+      border-color: #ccc #ccc #fff #ccc;
+    }
+  }
+
+  .panel {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+  }
+}

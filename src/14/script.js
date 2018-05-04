@@ -1,4 +1,9 @@
+// var tabs = document.querySelector('.tab');
+
 initTab();
+// initTab(tabs[0]);
+// initTab(tabs[1]);
+// initTab(tabs[2]);
 
 function initTab() {
     var tab = document.querySelector('.tab');
@@ -23,6 +28,6 @@ function initTab() {
 
     var event = new Event('click');
     // lis[0].dispatchEvent(event);
-
+    
     tab.querySelector('.tab-menu li.active').dispatchEvent(event);
 }

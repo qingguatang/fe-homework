@@ -1,14 +1,29 @@
-// var tabs = document.querySelector('.tab');
+var tabs = document.querySelectorAll('.tab');
 
-initTab();
-// initTab(tabs[0]);
-// initTab(tabs[1]);
-// initTab(tabs[2]);
+// initTab(tabs);
+initTab(tabs[0]);
+initTab(tabs[1], '.menu li');
+// initTab(tabs[2], undefined, '.pane');
+// initTab(tabs[2], null, '.pane');
+initTab(tabs[2], false, '.pane');
 
-function initTab() {
-    var tab = document.querySelector('.tab');
-    var lis = tab.querySelectorAll('.tab-menu li');
-    var panels = tab.querySelectorAll('.panel');
+function initTab(tab, menuSelector, paneSelector) {
+    console.log(menuSelector);
+    // var tab = document.querySelector('.tab');
+    // if (menuSelector == undefined) {
+    //     menuSelector = '.tab-menu li';
+    // }
+    if (!menuSelector) {
+        menuSelector = '.tab-menu li';
+    }
+    // if (paneSelector == undefined) {
+    //     paneSelector = '.panel'
+    // }
+    if (!paneSelector) {
+        paneSelector = '.panel';
+    }
+    var lis = tab.querySelectorAll(menuSelector);
+    var panels = tab.querySelectorAll(paneSelector);
 
     for (var i = 0; i < lis.length; i++) {
         addEvent(i);
@@ -28,6 +43,12 @@ function initTab() {
 
     var event = new Event('click');
     // lis[0].dispatchEvent(event);
-    
-    tab.querySelector('.tab-menu li.active').dispatchEvent(event);
+
+    // tab.querySelector('.tab-menu li.active').dispatchEvent(event);
+    for (var i = 0; i < lis.length; i++) {
+        if (lis[i].classList.contains('active')) {
+            lis[i].dispatchEvent(event);
+            break;
+        }
+    }
 }

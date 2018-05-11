@@ -2,26 +2,43 @@ var tabs = document.querySelectorAll('.tab');
 
 // initTab(tabs);
 initTab(tabs[0]);
-initTab(tabs[1], '.menu li');
+initTab(tabs[1], {
+    menuSelector: '.menu li'
+});
 // initTab(tabs[2], undefined, '.pane');
 // initTab(tabs[2], null, '.pane');
-initTab(tabs[2], false, '.pane');
 
-function initTab(tab, menuSelector, paneSelector) {
-    console.log(menuSelector);
+var options = {
+    menuSelector: false,
+    paneSelector: '.pane',
+    autoPlay: true,
+};
+initTab(tabs[2], {
+    paneSelector: '.pane'
+});
+
+// function initTab(tab, menuSelector, paneSelector,autoPlay) {
+function initTab(tab, options) {
+    options = options || {};
+    console.log(options.menuSelector);
     // var tab = document.querySelector('.tab');
     // if (menuSelector == undefined) {
     //     menuSelector = '.tab-menu li';
     // }
-    if (!menuSelector) {
-        menuSelector = '.tab-menu li';
-    }
+    // if (!menuSelector) {
+    //     menuSelector = '.tab-menu li';
+    // }
+    // menuSelector = menuSelector || '.tab-menu li';
+    menuSelector = options.menuSelector || '.tab-menu li';
     // if (paneSelector == undefined) {
     //     paneSelector = '.panel'
     // }
-    if (!paneSelector) {
-        paneSelector = '.panel';
-    }
+    // if (!paneSelector) {
+    //     paneSelector = '.panel';
+    // }
+    // paneSelector = paneSelector || ".panel";
+    paneSelector = options.paneSelector || ".panel";
+
     var lis = tab.querySelectorAll(menuSelector);
     var panels = tab.querySelectorAll(paneSelector);
 

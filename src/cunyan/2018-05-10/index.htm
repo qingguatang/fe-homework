@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        table,tr,td,th,ul,li {
+            border:1px solid rgb(180, 22, 22);
+        }
+        .items {
+	        list-style-type:none;
+	        margin:0;
+	        padding:0;
+	        padding-top:6px;
+	        padding-bottom:6px;
+        }
+        .item {
+	        display:inline;
+        }
+        a {
+            text-align:center;
+            text-decoration:none;
+            text-transform:uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul class="items">
+            <li class="item"> <a href="#">豆瓣读书</a></li>
+            <li class="item"> <a href="#">豆瓣电影</a></li>
+            <li class="item"> <a href="#">豆瓣音乐</a></li>
+            <li class="item"> <a href="#">豆瓣小组</a></li>
+        </ul>
+    </div>
+
+    <h1> 前端：布局-Tips </h1>
+    <h3> 1，使用 &lt; &gt; &amp;等特殊字符，应该怎样在内容中显示 ？ </h3>
+    <p>HTML是一种标签语言，大多数的标签需要用 &lt; &gt; 和 &amp; 等特殊字符字符来作做为标签的标识，但是在显示内容中存在 &lt; &gt; &amp; 的时候，为了不让浏览器将它们识别成标签，我们就需要用到转义符了。<br>
+        转义符就像是我们和解析程序之间的一种约定，当遇到约定的字符串时，解析程序会将这个字符串替换成指定的字符。HTML转义符由三部分组成：第一部分是一个&amp;符号，表示转义符的开始；第二部分是实体名字或者 # 加上实体编号；第三部分是一个分号，表示转义符的结束。下面列出一些常用的HTML转义符：</p>
+    <p>ps：<a href="https://www.baidu.com">常用HTML转义符对照表</a></p>
+
+    <table>
+        <tr>
+            <th> 字符 </th>
+            <th> 转义符</th>
+            <th> 十进制转义符 </th>
+        </tr>
+        <tr>
+            <td> 空格 </td>
+            <td> &amp;nbsp; </td>
+            <td> &amp;#160;</td>
+        </tr>
+        <tr>
+            <td> &lt; </td>
+            <td> &amp;lt; </td>
+            <td> &amp;#60; </td>
+        </tr>
+        <tr>
+            <td> &gt; </td>
+            <td> &amp;gt; </td>
+            <td> &amp;#62; </td>
+        </tr>
+        <tr>
+            <td> &amp; </td>
+            <td> &amp;amp; </td>
+            <td> &amp;#38; </td>
+        </tr>
+        <tr>
+            <td> &quot; </td>
+            <td> &amp;quot; </td>
+            <td> &amp;#34; </td>
+        </tr>
+        <tr>
+            <td> &yen; </td>
+            <td> &amp;yen; </td>
+            <td> &amp;#165; </td>
+        </tr>
+    </table>
+    <h3>2，如何在HTML中输出多个空格？</h3>
+    <p>通常情况，HTML会自动截取多余的空格，也就是不管你在代码中键入多少个空格，在显示上都只会保留一个，如果想要显示多个空格，我们就可以用上表中的 &amp;nbsp; 来增加空格数。</p>
+ 
+</body>
+</html>

@@ -13,6 +13,11 @@ function addText() {
 
     var textInput = document.querySelector('.text-editor .text-input');
     var text = textInput.value;
+    var value = textInput.value.trim();
+    if (!value) {
+        alert('请输入内容！');
+        return;
+    }
 
     var boldCheckbox = document.querySelector('.text-editor .bold-checkbox');
     console.log(boldCheckbox.checked);

@@ -59,7 +59,7 @@ function initMenu() {
         }
 
         function addEvent(index) {
-            lis[index].addEventListener('click', function () {
+            lis[index].addEventListener('click', function() {
                 for (var i = 0; i < lis.length; i++) {
                     lis[i].classList.remove('active');
                 }

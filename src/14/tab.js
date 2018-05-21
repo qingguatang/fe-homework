@@ -28,13 +28,14 @@ function initTab(index, options) {
         lis[index].addEventListener('click', function () {
             for (var i = 0; i < lis.length; i++) {
                 lis[i].classList.remove('active');
-                if (!panels) {
+                // 这个判断写错了
+                if (panels[i]) {
                     panels[i].style.display = 'none';
                 }
                
             }
             lis[index].classList.add('active');
-            if (!panels) {
+            if (panels[index]) {
                 panels[index].style.display = 'block';
             }
         });

@@ -1,6 +1,7 @@
 var tabs = document.querySelectorAll('.tab');
+var myMenu = document.querySelector('.mymenu');
 var options = {
-    menuSelector: '.menu li',
+    menuSelector: '.menu li, .first-menu li',
     panelSelector: '.pane',
 };
 
@@ -10,6 +11,10 @@ initTab(tabs[1], {
 });
 initTab(tabs[2], {
     panelSelector: '.pane'
+});
+
+initTab(myMenu, {
+    menuSelector: '.first-menu li'
 });
 
 function initTab(index, options) {
@@ -32,7 +37,7 @@ function initTab(index, options) {
                 if (panels[i]) {
                     panels[i].style.display = 'none';
                 }
-               
+
             }
             lis[index].classList.add('active');
             if (panels[index]) {

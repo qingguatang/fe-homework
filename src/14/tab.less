@@ -25,8 +25,8 @@
     }
   }
 
-  .panel,
-  .pane {
+  .pane,
+  .panel {
     border: 1px solid #ccc;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -37,51 +37,54 @@
 .mymenu {
   // 这个清除浮动位置有点不好，
   // 应该是在 li的直接父级，也就是放在ul上。
-  .clearfix();
   width: 600px;
   background: #000;
   margin-left: 30px;
   margin-top: 20px;
   border-radius: 5px;
 
-  li {
-    // border: 1px solid red;
-    float: left;
-    color: #fff;
-    font-size: 14px;
-    padding: 0 20px;
-    border-right: 1px solid #404040;
-    cursor: pointer;
-  }
+  .first-menu {
+    .clearfix();
 
-  li:first-child {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-  }
-
-  li.active {
-    &.red {
-      background-color: #db2828;
+    li {
+      // border: 1px solid red;
+      float: left;
+      color: #fff;
+      font-size: 14px;
+      padding: 0 20px;
+      border-right: 1px solid #404040;
+      cursor: pointer;
     }
 
-    &.orange {
-      background-color: #f2711c;
+    li:first-child {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
     }
 
-    &.yellow {
-      background-color: #fbbd08;
-    }
+    li.active {
+      &.red {
+        background-color: #db2828;
+      }
 
-    &.olive {
-      background-color: #b5cc18;
-    }
+      &.orange {
+        background-color: #f2711c;
+      }
 
-    &.green {
-      background-color: #21ba45;
-    }
+      &.yellow {
+        background-color: #fbbd08;
+      }
 
-    &.teal {
-      background-color: #00b5ad;
+      &.olive {
+        background-color: #b5cc18;
+      }
+
+      &.green {
+        background-color: #21ba45;
+      }
+
+      &.teal {
+        background-color: #00b5ad;
+      }
     }
   }
 }

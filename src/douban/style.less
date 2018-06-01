@@ -6,7 +6,6 @@
   color: #d5d5d5;
   background-color: #545652;
   min-width: 950px;
-  line-height: 1.62;
 
   .top-nav {
     .clearfix();
@@ -22,6 +21,7 @@
         cursor: pointer;
         color: #d5d5d5;
         font-size: 12px;
+        line-height: 28px;
       }
 
       a:hover {
@@ -45,6 +45,7 @@
         cursor: pointer;
         color: #d5d5d5;
         font-size: 12px;
+        line-height: 28px;
       }
 
       a:hover {
@@ -55,6 +56,7 @@
 
   .menu {
     float: right;
+    margin-top: 5px;
     margin-right: 20px;
     position: relative;
 
@@ -91,6 +93,82 @@
     &.active {
       .items {
         display: block;
+      }
+    }
+  }
+}
+
+.page {
+  background-color: #edf4ed;
+  border-bottom: 1px solid #e5ebe4;
+
+  .page-header {
+    // .debug();
+    .clearfix();
+    width: 1040px;
+    margin: 0 auto;
+
+    .page-logo {
+      float: left;
+      margin: 0 13px 0 0;
+      width: 184px;
+      height: 57px;
+      background: url("https://img3.doubanio.com/dae/accounts/resources/321e246/sns/assets/lg_main_a11_1.png") no-repeat 0 12px;
+    }
+
+    .page-nav {
+      float: left;
+      margin-top: 15px;
+
+      .list {
+        .clearfix();
+
+        li {
+          //   .debug();
+          float: left;
+          margin-right: 20px;
+          font-size: 16px;
+          position: relative;
+
+          a {
+            cursor: pointer;
+            color: #072;
+            font-size: 16px;
+            text-decoration: none;
+            margin-right: 20px;
+          }
+
+          a:hover {
+            background-color: #072;
+            color: #fff;
+          }
+
+          .new {
+            background-color: #ff8066;
+            color: #fff;
+            font-size: 12px;
+            position: absolute;
+            right: 1px;
+            top: -10px;
+            transform: scale(0.6);
+          }
+        }
+      }
+    }
+
+    .page-search {
+      float: right;
+      padding: 10px 0 15px;
+
+      input {
+        width: 242px;
+        line-height: 1.5;
+        padding-left: 10px;
+        margin-top: 10px;
+        outline: none;
+        border: none;
+        font-size: 13px;
+        background-color: #fff;
       }
     }
   }

@@ -1,0 +1,97 @@
+@import 'src/lib/common.less';
+
+.top-bar {
+  //   .debug();
+  .clearfix();
+  color: #d5d5d5;
+  background-color: #545652;
+  min-width: 950px;
+  line-height: 1.62;
+
+  .top-nav {
+    .clearfix();
+    float: left;
+
+    li {
+      float: left;
+
+      a {
+        // .debug();
+        padding: 0 12px;
+        text-decoration: none;
+        cursor: pointer;
+        color: #d5d5d5;
+        font-size: 12px;
+      }
+
+      a:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .main-nav {
+    .clearfix();
+    float: left;
+    margin-left: 510px;
+
+    li {
+      float: left;
+
+      a {
+        // .debug();
+        padding: 0 12px;
+        text-decoration: none;
+        cursor: pointer;
+        color: #d5d5d5;
+        font-size: 12px;
+      }
+
+      a:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .menu {
+    float: right;
+    margin-right: 20px;
+    position: relative;
+
+    .id {
+      cursor: pointer;
+      font-size: 12px;
+      color: #d5d5d5;
+    }
+
+    .id:hover {
+      color: #fff;
+    }
+
+    .items {
+      position: absolute;
+      box-sizing: border-box;
+      width: 100%;
+      border: 1px solid #e6e6e6;
+      background: #fff;
+      display: none;
+
+      li {
+        color: #3d3d3d;
+        padding: 5px 10px;
+        font-size: 12px;
+      }
+
+      li:hover {
+        cursor: pointer;
+        background-color: #eee;
+      }
+    }
+
+    &.active {
+      .items {
+        display: block;
+      }
+    }
+  }
+}

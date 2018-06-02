@@ -1,5 +1,8 @@
 initMenu();
 
+// 你可以尝试将编辑器的缩进改成2个空格，目前前端界多数是使用两个空格缩进的
+// HTML, CSS, JS都可尝试使用两个空格的缩进。
+// 在vscode的settings中找找？
 function initMenu() {
     var menu = document.querySelector('.top-bar .menu');
     var id = menu.querySelector('.id');

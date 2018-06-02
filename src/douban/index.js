@@ -8,6 +8,10 @@ function initMenu() {
     id.addEventListener('click', function () {
         console.log('hello');
 
+        // classList还有一个方法叫 toggle，也可以实现下面的逻辑
+        // 你可以看看文档尝试一下，文档在这里：https://developer.mozilla.org/zh-CN/docs/Web/API/Element/classList
+        // 查文档时如果你google打不开，可以使用 www.bing.com 来搜索，最好不要用百度哈，那玩意儿找不到技术文章
+        // 查文档可以使用关键词叫 MDN，比如 classList MDN， 这样就会找到相关的
         if (menu.classList.contains('active')) {
             menu.classList.remove('active');
         } else {

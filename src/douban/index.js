@@ -8,10 +8,11 @@ function initMenu() {
     id.addEventListener('click', function () {
         console.log('hello');
 
-        if (menu.classList.contains('active')) {
-            menu.classList.remove('active');
-        } else {
-            menu.classList.add('active');
-        }
+        // if (menu.classList.contains('active')) {
+        //     menu.classList.remove('active');
+        // } else {
+        //     menu.classList.add('active');
+        // }
+        menu.classList.toggle('active');
     });
 }

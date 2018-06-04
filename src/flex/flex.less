@@ -1,0 +1,128 @@
+body {
+  max-width: 1024px;
+  margin: 0 auto; //定宽居中
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  font-size: 16px;
+  color: #072;
+  padding: 5px 0;
+  border-bottom: 1px solid #e5ebe4;
+}
+
+p {
+  font-size: 14px;
+  color: #fff;
+  background-color: #edf4ed;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.box {
+  background-color: #fff;
+  margin: 0 0 55px;
+  display: flex;
+
+  .box-item {
+    width: 200px;
+    line-height: 200px;
+    font-size: 100px;
+    background-color: #545652;
+    color: #fff;
+    margin: 5px;
+    text-align: center;
+  }
+
+  .item-tall {
+    height: 400px;
+  }
+
+}
+
+.box-1 {
+  flex-direction: row;
+}
+
+.box-2 {
+  flex-direction: row-reverse;
+}
+
+.box-3 {
+  flex-direction: column;
+}
+
+.box-4 {
+  flex-direction: column-reverse;
+}
+
+.box-5 {
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.box-6 {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.box-7 {
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+}
+
+.box-8 {
+  flex-flow: row-reverse wrap;
+}
+
+.box-9 {
+  justify-content: flex-start;
+}
+
+.box-10 {
+  justify-content: flex-end;
+}
+
+.box-11 {
+  justify-content: center;
+}
+
+.box-12 {
+  justify-content: space-between;
+}
+
+.box-13 {
+  justify-content: space-around;
+}
+
+.box-14 {
+  align-items: flex-start;
+}
+
+.box-15 {
+  align-items: flex-end;
+}
+
+.box-16 {
+  align-items: center;
+}
+
+.box-17 {
+  align-items: baseline;
+}
+
+.box-18 {
+  align-items: stretch;
+}
+
+.box-19 {
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.box-20 {
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+

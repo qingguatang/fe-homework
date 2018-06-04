@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex 布局</title>
+  <link rel="stylesheet" href="flex.css">
+</head>
+
+<body>
+  <h1>1. flex-direction属性</h1>
+  <p>
+    flex-direction属性决定主轴的方向（即项目的排列方向）。
+  </p>
+
+  <p>
+    row（默认值）：主轴为水平方向，起点在左端。
+  </p>
+  <div class="box box-1">
+    <div class="box-item">1</div>
+    <div class="box-item">2</div>
+    <div class="box-item">3</div>
+    <div class="box-item">4</div>
+  </div>
+
+  <p>
+    row-reverse：主轴为水平方向，起点在右端。
+  </p>
+  <div class="box box-2">
+    <div class="box-item">1</div>
+    <div class="box-item">2</div>
+    <div class="box-item">3</div>
+    <div class="box-item">4</div>
+  </div>
+
+  <p>
+    column：主轴为垂直方向，起点在上沿。
+  </p>
+  <div class="box box-3">
+    <div class="box-item">1</div>
+    <div class="box-item">2</div>
+    <div class="box-item">3</div>
+    <div class="box-item">4</div>
+  </div>
+
+  <p>
+    column-reverse：主轴为垂直方向，起点在上沿。
+  </p>
+  <div class="box box-4">
+    <div class="box-item">1</div>
+    <div class="box-item">2</div>
+    <div class="box-item">3</div>
+    <div class="box-item">4</div>
+  </div>
+
+  <h1>2. flex-wrap属性</h1>
+  <p>
+    默认情况下，项目都排在一条线（又称"轴线"）上。flex-wrap属性定义，如果一条轴线排不下，如何换行。
+  </p>
+
+  <p>
+    nowrap（默认）：不换行。
+  </p>
+  <div class="box box-5">
+    <div class="box-item">1</div>
+    <div class="box-item">2</div>
+    <div class="box-item">3</div>
+    <div class="box-item">4</div>
+    <div class="box-item">5</div>
+    <div class="box-item">6</div>
+    <div class="box-item">7</div>
+  </div>
+
+  <p>
+    wrap：换行，第一行在上方。
+  </p>
+  <div class="box box-6">
+    <div class="box-item">1</div>
+    <div class="box-item">2</div>
+    <div class="box-item">3</div>
+    <div class="box-item">4</div>
+    <div class="box-item">5</div>
+    <div class="box-item">6</div>
+    <div class="box-item">7</div>
+  </div>
+
+  <p>
+    wrap-reverse，换行，并且第一行在下方。</p>
+  <div class="box box-7">
+    <div class="box-item">1</div>
+    <div class="box-item">2</div>
+    <div class="box-item">3</div>
+    <div class="box-item">4</div>
+    <div class="box-item">5</div>
+    <div class="box-item">6</div>
+    <div class="box-item">7</div>
+  </div>
+
+  <h1>3. flex-flow属性</h1>
+  <p>
+    flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。
+  </p>
+  <p>
+    .box { flex-flow: &lt;flex-direction&gt; || &lt;flex-wrap&gt;; }
+    <!-- 在HTML定义的转义序列中，＆的转义序列为＆amps或＆#38，＜的转义序列为＆lt或＆#60，＞的转义序列为＆gt或＆#62，引号的转义序列为＆quot或＆#34。 -->
+  </p>
+  <p>
+    flex-flow: row-reverse wrap;
+  </p>
+  <div class="box box-8">
+    <div class="box-item">1</div>
+    <div class="box-item">2</div>
+    <div class="box-item">3</div>
+    <div class="box-item">4</div>
+    <div class="box-item">5</div>
+    <div class="box-item">6</div>
+    <div class="box-item">7</div>
+  </div>
+
+  <h1>4. justify-content属性</h1>
+  <p>
+    justify-content属性定义了项目在主轴上的对齐方式。
+  </p>
+
+  <p>
+    flex-start（默认值）：左对齐
+  </p>
+  <div class="box box-9">
+    <div class="box-item">1</div>
+    <div class="box-item">2</div>
+    <div class="box-item">3</div>
+    <div class="box-item">4</div>
+  </div>
+
+  <p>
+    flex-end：右对齐
+  </p>
+  <div class="box box-10">
+    <div class="box-item">1</div>
+    <div class="box-item">2</div>
+    <div class="box-item">3</div>
+    <div class="box-item">4</div>
+  </div>
+
+  <p>
+    center：居中
+  </p>
+  <div class="box box-11">
+    <div class="box-item">1</div>
+    <div class="box-item">2</div>
+    <div class="box-item">3</div>
+    <div class="box-item">4</div>
+  </div>
+
+  <p>
+    space-between：两端对齐，项目之间的间隔都相等。
+  </p>
+  <div class="box box-12">
+    <div class="box-item">1</div>
+    <div class="box-item">2</div>
+    <div class="box-item">3</div>
+    <div class="box-item">4</div>
+  </div>
+
+  <p>
+    space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
+  </p>
+  <div class="box box-13">
+    <div class="box-item">1</div>
+    <div class="box-item">2</div>
+    <div class="box-item">3</div>
+    <div class="box-item">4</div>
+  </div>
+
+  <h1>5. align-items属性</h1>
+  <p>
+    align-items属性定义项目在交叉轴上如何对齐。(假设交叉轴从上到下)
+  </p>
+
+  <p>
+    flex-start：交叉轴的起点对齐。
+  </p>
+  <div class="box box-14">
+    <div class="box-item">1</div>
+    <div class="box-item item-tall">2</div>
+    <div class="box-item ">3</div>
+    <div class="box-item item-tall ">4</div>
+  </div>
+
+  <p>
+    flex-end：交叉轴的终点对齐。
+  </p>
+  <div class="box box-15">
+    <div class="box-item">1</div>
+    <div class="box-item item-tall">2</div>
+    <div class="box-item ">3</div>
+    <div class="box-item item-tall ">4</div>
+  </div>
+
+  <p>
+    center：交叉轴的中点对齐。
+  </p>
+  <div class="box box-16">
+    <div class="box-item">1</div>
+    <div class="box-item item-tall">2</div>
+    <div class="box-item ">3</div>
+    <div class="box-item item-tall ">4</div>
+  </div>
+
+  <p>
+    baseline: 项目的第一行文字的基线对齐。
+  </p>
+  <div class="box box-17">
+    <div class="box-item">1</div>
+    <div class="box-item item-tall">2</div>
+    <div class="box-item ">3</div>
+    <div class="box-item item-tall ">4</div>
+  </div>
+
+  <p>
+    stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。
+  </p>
+  <div class="box box-18">
+    <div class="box-item">1</div>
+    <div class="box-item item-tall">2</div>
+    <div class="box-item ">3</div>
+    <div class="box-item item-tall ">4</div>
+  </div>
+
+  <h1>6. align-content属性</h1>
+  <p>
+    align-content属性定义了多根轴线（多行）的对齐方式。如果项目只有一根轴线，该属性不起作用。
+  </p>
+
+  <p>
+    flex-start：与交叉轴的起点对齐。
+  </p>
+  <div class="box box-tall box-19">
+    <div class="box-item">1</div>
+    <div class="box-item">2</div>
+    <div class="box-item">3</div>
+    <div class="box-item">4</div>
+    <div class="box-item">5</div>
+    <div class="box-item">6</div>
+    <div class="box-item">7</div>
+    <div class="box-item">8</div>
+    <div class="box-item">9</div>
+  </div>
+
+  <p>
+    flex-end：与交叉轴的终点对齐。
+  </p>
+  <div class="box box-tall box-20">
+    <div class="box-item">1</div>
+    <div class="box-item">2</div>
+    <div class="box-item">3</div>
+    <div class="box-item">4</div>
+    <div class="box-item">5</div>
+    <div class="box-item">6</div>
+    <div class="box-item">7</div>
+    <div class="box-item">8</div>
+    <div class="box-item">9</div>
+  </div>
+
+</body>
+
+</html>

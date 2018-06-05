@@ -205,10 +205,14 @@
 
     .column-list {
       display: flex;
+      flex: 1;   // 会自动撑开，flex这个属性要弄明白什么含义
 
       li {
+        display: flex;
         padding-left: 22px;
         margin-right: 18px;
+        align-items: center;   // 居中对齐， 还有一个对齐的属性是 justify-content， 那个也要弄清楚
+        // 所以flex要弄明白 flex-direction, flex, align-items, justify-content 这4个基本上就够用了
 
         a {
           text-decoration: none;
@@ -228,6 +232,7 @@
           display: block;
           width: 24px;
           height: 24px;
+          margin-right: 4px;
           border: 1px solid red;
         }
       }
@@ -250,7 +255,7 @@
     }
 
     .setting {
-      margin-left: 275px;
+      // margin-left: 275px;
 
       .icon {
         background: url("images/下载.png") no-repeat 0 -84px;

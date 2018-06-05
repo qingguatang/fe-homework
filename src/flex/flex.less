@@ -7,9 +7,13 @@ body {
 
 h1 {
   font-size: 16px;
-  color: #072;
   padding: 5px 0;
   border-bottom: 1px solid #e5ebe4;
+}
+
+h2 {
+  font-size: 14px;
+  color: #072;
 }
 
 p {
@@ -73,7 +77,10 @@ p {
 }
 
 .box-8 {
+  // flex-flow: row nowrap;
+  // flex-flow: row wrap;
   flex-flow: row-reverse wrap;
+  // flex-flow: row wrap-reverse;
 }
 
 .box-9 {
@@ -126,3 +133,25 @@ p {
   align-content: flex-end;
 }
 
+.box-21 {
+  .order {
+    order: -1;
+  }
+
+  .box-item div {
+    font-size: 14px;
+    position: relative;
+    top: -150px;
+  }
+}
+
+.box-22 {
+  .box-item {
+    flex-grow: 1;
+    // width: auto;
+  }
+
+  .grow-2 {
+    flex-grow: 2;
+  }
+}

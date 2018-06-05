@@ -10,7 +10,8 @@
 </head>
 
 <body>
-  <h1>1. flex-direction属性</h1>
+  <h1>一、 容器的属性</h1>
+  <h2>1. flex-direction属性</h2>
   <p>
     flex-direction属性决定主轴的方向（即项目的排列方向）。
   </p>
@@ -55,7 +56,7 @@
     <div class="box-item">4</div>
   </div>
 
-  <h1>2. flex-wrap属性</h1>
+  <h2>2. flex-wrap属性</h2>
   <p>
     默认情况下，项目都排在一条线（又称"轴线"）上。flex-wrap属性定义，如果一条轴线排不下，如何换行。
   </p>
@@ -98,7 +99,7 @@
     <div class="box-item">7</div>
   </div>
 
-  <h1>3. flex-flow属性</h1>
+  <h2>3. flex-flow属性</h2>
   <p>
     flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。
   </p>
@@ -119,7 +120,7 @@
     <div class="box-item">7</div>
   </div>
 
-  <h1>4. justify-content属性</h1>
+  <h2>4. justify-content属性</h2>
   <p>
     justify-content属性定义了项目在主轴上的对齐方式。
   </p>
@@ -174,7 +175,7 @@
     <div class="box-item">4</div>
   </div>
 
-  <h1>5. align-items属性</h1>
+  <h2>5. align-items属性</h2>
   <p>
     align-items属性定义项目在交叉轴上如何对齐。(假设交叉轴从上到下)
   </p>
@@ -229,7 +230,7 @@
     <div class="box-item item-tall ">4</div>
   </div>
 
-  <h1>6. align-content属性</h1>
+  <h2>6. align-content属性</h2>
   <p>
     align-content属性定义了多根轴线（多行）的对齐方式。如果项目只有一根轴线，该属性不起作用。
   </p>
@@ -264,6 +265,37 @@
     <div class="box-item">9</div>
   </div>
 
+  <h1>二、项目的属性</h1>
+
+  <h2>1. order属性</h2>
+  <p>
+    order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。
+  </p>
+  <div class="box box-21">
+    <div class="box-item">1</div>
+    <div class="box-item">2</div>
+    <div class="box-item">3</div>
+    <div class="box-item order">4
+      <div>(order:-1)</div>
+    </div>
+  </div>
+
+  <h2>2. flex-grow属性</h2>
+  <p>
+    flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。
+  </p>
+  <div class="box box-22">
+      <div class="box-item grow">1
+        <div>flex-grow: 1</div>
+      </div>
+      <div class="box-item grow grow-2">2
+        <div>flex-grow: 2</div>
+      </div>
+      <div class="box-item grow">3
+        <div>flex-grow: 1</div>
+      </div>
+    </div>
+    
 </body>
 
 </html>

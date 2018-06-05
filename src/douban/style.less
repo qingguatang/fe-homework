@@ -159,8 +159,9 @@
     .page-search {
       float: right;
       padding: 10px 0 15px;
+      position: relative;
 
-      input {
+      .text {
         width: 242px;
         line-height: 1.5;
         padding-left: 10px;
@@ -170,6 +171,107 @@
         font-size: 13px;
         background-color: #fff;
       }
+
+      .btn {
+        width: 24px;
+        font-size: 13px;
+        line-height: 1.5;
+        background-color: #fff;
+        border: none;
+        position: absolute;
+        right: 0;
+        top: 20px;
+      }
+
+      .icon-search {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 0;
+        top: 20px;
+      }
     }
   }
+}
+
+.content {
+  width: 1040px;
+  margin: 0 auto;
+
+  .column {
+    width: 675px;
+    display: flex;
+    margin-top: 40px;
+
+    .column-list {
+      display: flex;
+
+      li {
+        padding-left: 22px;
+        margin-right: 18px;
+
+        a {
+          text-decoration: none;
+          cursor: pointer;
+          color: #669;
+          font-size: 14px;
+        }
+
+        a:hover {
+          color: #fff;
+          background: #37a;
+        }
+
+        .icon {
+          background: url("images/下载.png") no-repeat 0 0;
+          background-size: 24px auto;
+          display: block;
+          width: 24px;
+          height: 24px;
+          border: 1px solid red;
+        }
+      }
+
+      .talk .icon {
+        background-position: 0 -110px;
+      }
+
+      .photo .icon {
+        background-position: 0 -28px;
+      }
+
+      .web .icon {
+        background-position: 0 0;
+      }
+
+      .note .icon {
+        background-position: 0 -55px;
+      }
+    }
+
+    .setting {
+      margin-left: 275px;
+
+      .icon {
+        background: url("images/下载.png") no-repeat 0 -84px;
+        background-size: 24px auto;
+        display: block;
+        width: 24px;
+        height: 24px;
+        border: 1px solid red;
+      }
+
+      a {
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 14px;
+        color: #ccc;
+      }
+
+      a:hover {
+        color: #a5a5ac;
+      }
+    }
+  }
+
 }
